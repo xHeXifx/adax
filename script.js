@@ -1,4 +1,3 @@
-// Sample scripts data - replace with your actual scripts
 const scripts = [
     {
         name: "READ ME",
@@ -84,14 +83,21 @@ function createScriptElements() {
         const scriptContent = document.createElement('div');
         scriptContent.className = 'script-content';
         
-        if (script.name === "READ ME" || script.name === "Roblox" || script.name === "Misc") {
+        if (script.name === "READ ME") {
+            scriptContent.innerHTML = `
+                <p>${script.description}</p>
+                <div class="button-container">
+                    <button class="socials-btn" data-url="https://ebio.gg/@hexif">
+                        <i class="fas fa-users"></i> My Socials
+                    </button>
+                </div>
+            `;
+        } else if (script.name === "Roblox" || script.name === "Misc") {
             scriptContent.innerHTML = `
                 <p>${script.description}</p>
             `;
-            if (script.name !== "READ ME") {
-                scriptItem.classList.add('category-title');
-                scriptHeader.classList.add('category-header');
-            }
+            scriptItem.classList.add('category-title');
+            scriptHeader.classList.add('category-header');
         } else {
             scriptContent.innerHTML = `
                 <p>${script.description}</p>
@@ -171,9 +177,29 @@ function setupDownloadButtons() {
     });
 }
 
+function setupSocialsButton() {
+    const socialsBtn = document.querySelector('.socials-btn');
+    if (socialsBtn) {
+        socialsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            window.open(socialsBtn.dataset.url, '_blank');
+            
+            const originalContent = socialsBtn.innerHTML;
+            socialsBtn.innerHTML = '<i class="fas fa-check"></i> Opened!';
+            socialsBtn.classList.add('copied');
+            
+            setTimeout(() => {
+                socialsBtn.innerHTML = originalContent;
+                socialsBtn.classList.remove('copied');
+            }, 2000);
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     createScriptElements();
     setupExpandButtons();
     setupCopyButtons();
     setupDownloadButtons();
+    setupSocialsButton();
 });
