@@ -1,0 +1,145 @@
+:root {
+    --primary-purple: #8A2BE2;
+    --dark-purple: #4B0082;
+    --light-purple: #9370DB;
+    --background: #121212;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, var(--dark-purple), var(--background));
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--primary-purple);
+    margin-bottom: 1rem;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    color: var(--light-purple);
+}
+
+.scripts-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.script-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.script-item.expanded {
+    padding: 2rem;
+}
+
+.script-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.script-content {
+    display: none;
+    margin-top: 1rem;
+}
+
+.script-content.visible {
+    display: block;
+}
+
+button {
+    background-color: var(--dark-purple);
+    color: var(--text-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+button:hover {
+    background-color: var(--primary-purple);
+    box-shadow: 0 0 15px var(--primary-purple);
+}
+
+button.copied {
+    background-color: #4CAF50;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to top, var(--dark-purple), var(--background));
+    margin-top: 3rem;
+}
+
+.socials {
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: var(--light-purple);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--primary-purple);
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.category-title {
+    background: linear-gradient(to right, var(--dark-purple), transparent);
+    border-left: 4px solid var(--primary-purple);
+    margin-top: 2rem;
+}
+
+.category-header h3 {
+    color: var(--light-purple);
+    font-size: 1.8rem;
+}
+
+.category-title .script-content {
+    padding-left: 1rem;
+}
