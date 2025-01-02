@@ -36,6 +36,11 @@ h1 {
     color: var(--light-purple);
 }
 
+.credits {
+    font-size: 1.2rem;
+    color: var(--light-purple);
+}
+
 .scripts-container {
     max-width: 1200px;
     margin: 2rem auto;
