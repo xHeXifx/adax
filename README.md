@@ -2,6 +2,8 @@
 
 This repository serves as a hub for various software and scripts along with bots and maybe some software/scripts i've created. Explore tools, scripts, and resources designed to enhance your workflow and gaming experience, troubleshoot system issues, and more.
 
+# THIS SITE IS NOT BUILT FOR MOBILE AND WILL LOOK SHIT
+
 ## Highlights
 
 ### 🎮 Game Scripts
@@ -23,7 +25,7 @@ Detailed guides and documentation are available for each section. Refer to the r
 Got ideas or improvements? Contributions are always welcome, Open a issue or message me on discord via `@hexif`
 
 ## ⚠️ Disclaimer
-These tools are scanned through virustotal and tested by me before anything is uploaded here. The chance of a malicious file getting here is VERY low, all scripts/software are checked using [WireShark](https://www.wireshark.org) and [Windows Event Viewer](https://learn.microsoft.com/en-us/shows/inside/event-viewer) (not the best but its a good way to check file changes and commands executed). Use these tools and scripts responsibly anti-cheats are never perfect but they can update and you may be punished for certain scripts. Some scripts or bots might require administrative privileges its always best to review the any code before running it no matter where you got it from.
+These tools are scanned through virustotal and tested by me before anything is uploaded here. The chance of a malicious file getting here is VERY low, all scripts/software are checked using [WireShark](https://www.wireshark.org) and [Windows Event Viewer](https://learn.microsoft.com/en-us/shows/inside/event-viewer) (not the best but its a good way to check file changes and commands executed). Use these tools and scripts responsibly anti-cheats are never perfect but they can update and you may be punished for certain scripts. Some scripts or bots might require administrative privileges its always best to review the any code before running it no matter where you got it from. 
 
 
 ## 📫 Contact
