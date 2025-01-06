@@ -12,17 +12,24 @@
     box-sizing: border-box;
 }
 
+html, body {
+    min-height: 100vh;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: var(--background);
+    background: linear-gradient(to bottom, var(--background), var(--dark-purple), var(--background));
     color: var(--text-color);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     text-align: center;
     padding: 3rem 1rem;
-    background: linear-gradient(to bottom, var(--dark-purple), var(--background));
+    background: linear-gradient(to bottom, var(--dark-purple), transparent);
+    animation: fadeIn 1s ease-out;
 }
 
 h1 {
@@ -41,10 +48,105 @@ h1 {
     color: var(--light-purple);
 }
 
+/* Navigation Styles */
+.main-nav {
+    margin-top: 2rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--primary-purple);
+    box-shadow: 0 0 15px var(--primary-purple);
+}
+
+/* Home Page Styles */
+.home-content {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeIn 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--primary-purple);
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+    margin-top: 4rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-out 0.6s;
+    animation-fill-mode: both;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-purple);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--light-purple);
+    margin-bottom: 1rem;
+}
+
+.feature-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--dark-purple);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.feature-link:hover {
+    background-color: var(--primary-purple);
+    box-shadow: 0 0 15px var(--primary-purple);
+}
+
+/* Existing Styles */
 .scripts-container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+    animation: fadeIn 1s ease-out 0.3s;
+    animation-fill-mode: both;
 }
 
 .script-item {
@@ -53,6 +155,8 @@ h1 {
     padding: 1rem;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: both;
 }
 
 .script-item.expanded {
@@ -109,6 +213,8 @@ footer {
     padding: 2rem 1rem;
     background: linear-gradient(to top, var(--dark-purple), var(--background));
     margin-top: 3rem;
+    animation: fadeIn 1s ease-out 1.2s;
+    animation-fill-mode: both;
 }
 
 .socials {
@@ -147,4 +253,135 @@ footer {
 
 .category-title .script-content {
     padding-left: 1rem;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to elements */
+.hero {
+    animation: fadeIn 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+.feature-card {
+    animation: fadeIn 1s ease-out 0.6s;
+    animation-fill-mode: both;
+}
+
+.feature-card:nth-child(2) {
+    animation-delay: 0.9s;
+}
+
+.scripts-container {
+    animation: fadeIn 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+.script-item {
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+footer {
+    animation: fadeIn 1s ease-out 1.2s;
+    animation-fill-mode: both;
+}
+
+/* About and Work Section Styles */
+.about-me, .my-work {
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+.about-card, .work-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+    border-left: 4px solid var(--primary-purple);
+    transition: all 0.3s ease;
+}
+
+.about-card:hover, .work-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+}
+
+.about-card h2, .work-card h2 {
+    color: var(--primary-purple);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-card p, .work-card p {
+    color: var(--text-color);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.bot-invite-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #5865F2;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.bot-invite-btn:hover {
+    background-color: #4752C4;
+    box-shadow: 0 0 15px #5865F2;
+    transform: translateY(-2px);
+}
+
+.bot-invite-btn i {
+    font-size: 1.2rem;
+}
+
+.script-content h4 {
+    color: var(--light-purple);
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.script-content .how-to-use {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    border-left: 3px solid var(--primary-purple);
+}
+
+.script-content ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.script-content ul li {
+    margin: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.script-content ul li:before {
+    content: "•";
+    color: var(--primary-purple);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
 }
