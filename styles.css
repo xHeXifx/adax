@@ -17,12 +17,23 @@ html, body {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to bottom, var(--background), var(--dark-purple), var(--background));
     color: var(--text-color);
-    line-height: 1.6;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 header {
@@ -209,10 +220,11 @@ button.copied {
 }
 
 footer {
-    text-align: center;
-    padding: 2rem 1rem;
+    margin-top: auto;
+    width: 100%;
+    padding: 1rem 0;
     background: linear-gradient(to top, var(--dark-purple), var(--background));
-    margin-top: 3rem;
+    text-align: center;
     animation: fadeIn 1s ease-out 1.2s;
     animation-fill-mode: both;
 }

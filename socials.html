@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeXif - Socials</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="socials.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles"></div>
+    <div class="socials-container">
+        <div class="profile-section">
+            <div class="profile-header">
+                <div class="profile-picture">
+                    <img src="https://media1.tenor.com/m/vdV2-AWrawcAAAAd/gaming-daniel-larson.gif" alt="HeXif Profile Picture">
+                </div>
+                <h1 class="profile-name" data-text="HeXif"><span class="cursor">|</span></h1>
+            </div>
+            <b class="profile-bio">Developer | "Open your eyes, Open your mind"</b>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://discord.com/users/1142871692708958300" class="social-button discord" target="_blank">
+                <i class="fab fa-discord"></i>
+                <span>Discord</span>
+            </a>
+            <a href="https://www.last.fm/user/hexif" class="social-button lastfm" target="_blank">
+                <i class="fab fa-lastfm"></i>
+                <span>Last.fm</span>
+            </a>
+            <a href="https://open.spotify.com/user/n1gqaqwwyxzxb446xt3ohn2q3" class="social-button spotify" target="_blank">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify</span>
+            </a>
+            <a href="index.html" class="social-button adax">
+                <i class="fas fa-code"></i>
+                <span>Adax</span>
+            </a>
+            <a href="https://ebio.gg/@hexif" class="social-button ebio" target="_blank">
+                <i class="fas fa-globe"></i>
+                <span>eBio</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const particlesContainer = document.querySelector('.particles');
+            const particleCount = 150;
+
+            function createParticle() {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                particle.style.left = Math.random() * 100 + 'vw';
+                
+                const size = Math.random() * 5 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                const duration = Math.random() * 6 + 6;
+                particle.style.animation = `float ${duration}s infinite`;
+                
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                
+                particlesContainer.appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                    createParticle();
+                }, duration * 1000);
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                createParticle();
+            }
+
+            const profilePic = document.querySelector('.profile-picture');
+            profilePic.style.opacity = '1';
+            
+            const name = document.querySelector('.profile-name');
+            const text = name.dataset.text;
+            const cursor = document.querySelector('.cursor');
+            let charIndex = 0;
+            
+            function addChar() {
+                if (charIndex < text.length) {
+                    const char = document.createElement('span');
+                    char.textContent = text[charIndex];
+                    char.style.opacity = '0';
+                    name.insertBefore(char, cursor);
+                    
+                    requestAnimationFrame(() => {
+                        char.style.transition = 'opacity 0.3s ease';
+                        char.style.opacity = '1';
+                    });
+                    
+                    charIndex++;
+                    setTimeout(addChar, 150);
+                } else {
+                    setTimeout(() => {
+                        cursor.style.opacity = '0';
+                        const buttons = document.querySelectorAll('.social-button');
+                        buttons.forEach((button, index) => {
+                            setTimeout(() => {
+                                button.style.opacity = '1';
+                                button.style.transform = 'translateY(0)';
+                            }, index * 200);
+                        });
+                    }, 500);
+                }
+            }
+            
+            setTimeout(addChar, 1000);
+        });
+    </script>
+</body>
+</html> 
