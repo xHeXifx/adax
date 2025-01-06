@@ -1,4 +1,4 @@
-# Welcome to the Adax Repo 🌟
+# Welcome to the [Adax](https://xhexifx.github.io/adax) Repo 🌟
 
 This repository serves as a hub for various software and scripts along with bots and maybe some software/scripts i've created. Explore tools, scripts, and resources designed to enhance your workflow and gaming experience, troubleshoot system issues, and more.
 
