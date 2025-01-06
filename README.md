@@ -2,7 +2,7 @@
 
 This repository serves as a hub for various software and scripts along with bots and maybe some software/scripts i've created. Explore tools, scripts, and resources designed to enhance your workflow and gaming experience, troubleshoot system issues, and more.
 
-# THIS SITE IS NOT BUILT FOR MOBILE AND WILL LOOK SHIT
+### THIS SITE IS NOT BUILT FOR MOBILE AND WILL LOOK SHIT
 
 ## Highlights
 
