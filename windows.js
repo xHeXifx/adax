@@ -58,6 +58,15 @@ net start msiserver
 echo Windows Update components have been reset.
 pause`,
         downloadUrl: "#"
+    },
+    {
+        name: "VirusTotal Client",
+        description: "A client for VirusTotal that allows you to scan files and urls for malware. This is avalible in both a command line and gui version. The GUI version is a lot simplier as all you need to do is right click a file and choose the virustotal option, the windows version of the VirusTotal cmd clien can be installed via winget by running 'winget install VirusTotal.vt-cli' or by downloading the portable version below.",
+        code: `N/A`,
+        downloadUrl: "#",
+        hasMultipleVersions: true,
+        cmdVersion: "https://drive.google.com/file/d/1ZcXVBbmEief8Y-itTOKwtoJDj0Hf3NxX/view?usp=drive_link",
+        guiVersion: "https://drive.google.com/file/d/1fcL2eA62O5zLfPP3qxCOdzN3X9r79e1T/view?usp=drive_link"
     }
 ];
 
@@ -99,13 +108,34 @@ function createScriptElements() {
                 scriptHeader.classList.add('category-header');
             }
         } else {
+            let buttonsHtml = '';
+            if (script.hasMultipleVersions) {
+                buttonsHtml = `
+                    <div class="button-container">
+                        <button class="copy-btn" data-code="${script.code}">
+                            <i class="fas fa-copy"></i> Copy Script
+                        </button>
+                        <button class="download-btn cmd-version" data-url="${script.cmdVersion}">
+                            <i class="fas fa-download"></i> Command Version
+                        </button>
+                        <button class="download-btn gui-version" data-url="${script.guiVersion}">
+                            <i class="fas fa-desktop"></i> GUI Client
+                        </button>
+                    </div>
+                `;
+            } else {
+                buttonsHtml = `
+                    <div class="button-container">
+                        <button class="copy-btn" data-code="${script.code}">
+                            <i class="fas fa-copy"></i> Copy Script
+                        </button>
+                    </div>
+                `;
+            }
+
             scriptContent.innerHTML = `
                 <p>${script.description}</p>
-                <div class="button-container">
-                    <button class="copy-btn" data-code="${script.code}">
-                        <i class="fas fa-copy"></i> Copy Script
-                    </button>
-                </div>
+                ${buttonsHtml}
             `;
         }
         
@@ -154,8 +184,29 @@ function setupCopyButtons() {
     });
 }
 
+function setupDownloadButtons() {
+    document.querySelectorAll('.download-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const url = getGoogleDriveDirectLink(button.dataset.url);
+            const originalContent = button.innerHTML;
+            
+            window.open(url, '_blank');
+            
+            button.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+            button.classList.add('copied');
+            
+            setTimeout(() => {
+                button.innerHTML = originalContent;
+                button.classList.remove('copied');
+            }, 2000);
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     createScriptElements();
     setupExpandButtons();
     setupCopyButtons();
+    setupDownloadButtons();
 }); 
