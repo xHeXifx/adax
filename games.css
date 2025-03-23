@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a8a6ff;
+    --background-color: #0a0a0a;
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+.games-section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.games-section::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+    animation: glowLine 2s ease-in-out infinite;
+}
+
+.games-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    user-select: none;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.game-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInCard 0.5s ease-out forwards
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(108, 92, 231, 0.2);
+}
+
+.game-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-title {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 600;
+    user-select: none;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.games-grid .game-card:nth-child(1) { animation-delay: 0.1s; }
+.games-grid .game-card:nth-child(2) { animation-delay: 0.2s; }
+.games-grid .game-card:nth-child(3) { animation-delay: 0.3s; }
+.games-grid .game-card:nth-child(4) { animation-delay: 0.4s; }
+.games-grid .game-card:nth-child(5) { animation-delay: 0.5s; }
+.games-grid .game-card:nth-child(6) { animation-delay: 0.6s; }
+.games-grid .game-card:nth-child(7) { animation-delay: 0.7s; }
+.games-grid .game-card:nth-child(8) { animation-delay: 0.8s; }
+.games-grid .game-card:nth-child(9) { animation-delay: 0.9s; }
+.games-grid .game-card:nth-child(10) { animation-delay: 1s; }

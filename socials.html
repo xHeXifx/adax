@@ -13,47 +13,251 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="socials.css">
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="games.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <div class="particles"></div>
-    <div class="socials-container">
-        <div class="profile-section">
-            <div class="profile-header">
-                <div class="profile-picture">
-                    <img src="https://media1.tenor.com/m/vdV2-AWrawcAAAAd/gaming-daniel-larson.gif" alt="HeXif Profile Picture">
+    <nav class="mobile-nav">
+        <button class="menu-toggle">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    
+    <div class="page-wrapper">
+        <div class="socials-container" data-aos="fade-up">
+            <div class="profile-section">
+                <div class="profile-header">
+                    <div class="profile-picture">
+                        <img src="https://media1.tenor.com/m/vdV2-AWrawcAAAAd/gaming-daniel-larson.gif" alt="HeXif Profile Picture">
+                    </div>
+                    <h1 class="profile-name" data-text="HeXif"><span class="cursor">|</span></h1>
                 </div>
-                <h1 class="profile-name" data-text="HeXif"><span class="cursor">|</span></h1>
+                <b class="profile-bio">Developer | "Open your eyes, Open your mind"</b>
             </div>
-            <b class="profile-bio">Developer | "Open your eyes, Open your mind"</b>
+            
+            <div class="stats-section" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <span class="stat-number">54</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <!--<div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Creativity</span>
+                </div>-->
+            </div>
+
+            <div class="social-links" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://discord.com/users/1142871692708958300" class="social-button discord" target="_blank">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+                <a href="https://www.last.fm/user/hexif" class="social-button lastfm" target="_blank">
+                    <i class="fab fa-lastfm"></i>
+                    <span>Last.fm</span>
+                </a>
+                <a href="https://open.spotify.com/user/n1gqaqwwyxzxb446xt3ohn2q3" class="social-button spotify" target="_blank">
+                    <i class="fab fa-spotify"></i>
+                    <span>Spotify</span>
+                </a>
+                <a href="index.html" class="social-button adax">
+                    <i class="fas fa-code"></i>
+                    <span>Adax</span>
+                </a>
+                <a href="https://ebio.gg/@hexif" class="social-button ebio" target="_blank">
+                    <i class="fas fa-globe"></i>
+                    <span>eBio</span>
+                </a>
+            </div>
         </div>
-        
-        <div class="social-links">
-            <a href="https://discord.com/users/1142871692708958300" class="social-button discord" target="_blank">
-                <i class="fab fa-discord"></i>
-                <span>Discord</span>
-            </a>
-            <a href="https://www.last.fm/user/hexif" class="social-button lastfm" target="_blank">
-                <i class="fab fa-lastfm"></i>
-                <span>Last.fm</span>
-            </a>
-            <a href="https://open.spotify.com/user/n1gqaqwwyxzxb446xt3ohn2q3" class="social-button spotify" target="_blank">
-                <i class="fab fa-spotify"></i>
-                <span>Spotify</span>
-            </a>
-            <a href="index.html" class="social-button adax">
-                <i class="fas fa-code"></i>
-                <span>Adax</span>
-            </a>
-            <a href="https://ebio.gg/@hexif" class="social-button ebio" target="_blank">
-                <i class="fas fa-globe"></i>
-                <span>eBio</span>
-            </a>
-        </div>
+
+        <section class="about-section" data-aos="fade-up">
+            <h2>Languages I know</h2>
+            <div class="about-content">
+                <div class="skills-grid">
+                    <div class="skill-box">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fas fa-terminal"></i>
+                        <span>Batch</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-linux"></i>
+                        <span>Bash</span>
+                    </div>
+                    <div class="skill-box">
+                        <i class="fab fa-microsoft"></i>
+                        <span>C#</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-work" data-aos="fade-up">
+            <h2>Latest Work</h2>
+            <div class="work-grid">
+                <div class="work-item" data-aos="fade-up">
+                    <button class="close-button" style="display: none;">&times;</button>
+                    <div class="work-preview" style="background-image: url('images/axon.jpg');"></div>
+                    <h3>Axon</h3>
+                    <p>A cluster of bots for resellers</p>
+                    <div class="work-content">
+                        <div class="work-details">
+                            <div class="work-description">
+                                <h4>About this project</h4>
+                                <p>Axon is one of my favourite projects I've worked on ever, It really pushed my knowledge of python and working with more advanced modules, classes and importing functions from other files.<br>Its one of the longest projects I've spent creating and is still being expanded whenever I feel like it. Was deffinetly a hard project overall but was so worth the time spent.</p>
+                                <div class="code-stats">
+                                    <h4>Project Stats</h4>
+                                    <div class="stats-box">
+                                        <div class="stat-item code-lines">
+                                            <span class="stat-number">26,502+</span>
+                                            <span class="stat-label">Lines of Code</span>
+                                        </div>
+                                        <div class="stat-item code-files">
+                                            <span class="stat-number">41</span>
+                                            <span class="stat-label">Files</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">JSON</span>
+                                    <span class="tech-tag">HTML, CSS & JS</span>
+                                    <span class="tech-tag">APIs (GitHub)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <button class="close-button" style="display: none;">&times;</button>
+                    <div class="work-preview" style="background-image: url('images/axonshop.jpg');"></div>
+                    <h3>AxonShop</h3>
+                    <p>Webpage for Axon</p>
+                    <div class="work-content">
+                        <div class="work-details">
+                            <div class="work-description">
+                                <h4>About this project</h4>
+                                <p>AxonShop was a massive challege, It was the first proper webpage i've ever made that has really good functionality. HTML and esspecially JavaScript was a pain to work with, I had never really worked with webpages before so this was a good starting point.<br>The page uses APIs for Stripe and GitHub gists, gists for getting and sending data such as reviews and also updating authentication for the bots when a purchase is made. Stripe was kind of a pain to work with as I had to get the account verified but they're great for developing because of their test mode, overall a very fun project</p>
+                                <div class="code-stats">
+                                    <h4>Project Stats</h4>
+                                    <div class="stats-box">
+                                        <div class="stat-item code-lines">
+                                            <span class="stat-number">11,223+</span>
+                                            <span class="stat-label">Lines of Code</span>
+                                        </div>
+                                        <div class="stat-item code-files">
+                                            <span class="stat-number">32</span>
+                                            <span class="stat-label">Files</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="work-tech-stack">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">APIs (GitHub, Stripe)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="music-section" data-aos="fade-up">
+            <h2>Music</h2>
+            <div class="music-container">
+                <div class="album-cover">
+                    <img src="https://images.genius.com/db955eb28788028d2c48e20c78dc1f71.1000x1000x1.jpg" alt="Wedding Night Album Cover">
+                </div>
+                <div class="music-info">
+                    <h3 class="song-title">Wedding Night</h3>
+                    <p class="artist-name">sign crushes motorist</p>
+                    <p class="album-name">Hurting</p>
+                    <div class="play-button" id="playButton-weddingnight">
+                        <i class="fas fa-play"></i> Click to Play
+                    </div>
+                    <div class="lyrics-container" id="lyricsContainer-weddingnight">
+                        <!-- Lyrics will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="music-container">
+                <div class="album-cover">
+                    <img src="https://s.mxmcdn.net/images-storage/albums2/7/3/4/1/2/9/66921437_350_350.jpg" alt="BIDWUITB Album Cover">
+                </div>
+                <div class="music-info">
+                    <h3 class="song-title">BURN IT DOWN WASH US IN THE BLOOD</h3>
+                    <p class="artist-name">Lil Darkie & CHRIST DILLINGER</p>
+                    <p class="album-name">Darkillinger</p>
+                    <div class="play-button" id="playButton-burnitdown">
+                        <i class="fas fa-play"></i> Click to Play
+                    </div>
+                    <div class="lyrics-container" id="lyricsContainer-burnitdown">
+                        <!-- Lyrics will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="games-section" data-aos="fade-up">
+            <h2>Games 😛</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/rainbow-six-siege-logo-logo.png" alt="Rainbow Six Siege" class="game-image">
+                    <div class="game-title">Rainbow Six Siege</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://store-images.s-microsoft.com/image/apps.41394.14247769038588514.c32b7f8c-cb4d-4859-a2a8-4c02692f8838.7fe17e57-47cc-4b63-91e7-946616fc6908?q=90&w=480&h=270" alt="Minecraft" class="game-image">
+                    <div class="game-title">Minecraft</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://images.steamusercontent.com/ugc/797615631997451284/535D67FF80F9EB8FC9420FF44B6B7A96E882BDA9/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="Euro Truck Simualtor 2" class="game-image">
+                    <div class="game-title">Euro Truck Simulator 2</div>
+                </div>
+                <div class="game-card">
+                    <img src="https://ih1.redbubble.net/image.5691487393.6113/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="WEBFISHING" class="game-image">
+                    <div class="game-title">WEBFISHING</div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
+
+
+
+    <!-- Audio elements will be created dynamically by JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
             const particlesContainer = document.querySelector('.particles');
             const particleCount = 150;
 
@@ -92,20 +296,39 @@
             const cursor = document.querySelector('.cursor');
             let charIndex = 0;
             
+            // Random character set for the text scramble effect
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
+            
+            function randomChar() {
+                return chars[Math.floor(Math.random() * chars.length)];
+            }
+            
             function addChar() {
                 if (charIndex < text.length) {
                     const char = document.createElement('span');
-                    char.textContent = text[charIndex];
+                    char.textContent = randomChar();
                     char.style.opacity = '0';
                     name.insertBefore(char, cursor);
                     
-                    requestAnimationFrame(() => {
-                        char.style.transition = 'opacity 0.3s ease';
-                        char.style.opacity = '1';
-                    });
+                    let iterations = 0;
+                    const maxIterations = 5 + Math.floor(Math.random() * 5); // Random number of iterations between 5-10
                     
-                    charIndex++;
-                    setTimeout(addChar, 150);
+                    const scramble = setInterval(() => {
+                        char.textContent = iterations < maxIterations ? randomChar() : text[charIndex];
+                        
+                        if (iterations === 0) {
+                            char.style.opacity = '1';
+                        }
+                        
+                        if (iterations >= maxIterations) {
+                            clearInterval(scramble);
+                            charIndex++;
+                            setTimeout(addChar, 20);
+                        }
+                        
+                        iterations++;
+                    }, 50);
+                    
                 } else {
                     setTimeout(() => {
                         cursor.style.opacity = '0';
@@ -121,7 +344,293 @@
             }
             
             setTimeout(addChar, 1000);
+
+            // Letter-by-letter animation for text elements
+            function animateTextElement(element, delay = 0) {
+                if (!element) return;
+                
+                const text = element.textContent;
+                element.textContent = '';
+                element.style.opacity = '1';
+                
+                let charIndex = 0;
+                
+                setTimeout(() => {
+                    const addLetter = () => {
+                        if (charIndex < text.length) {
+                            element.textContent += text.charAt(charIndex);
+                            charIndex++;
+                            setTimeout(addLetter, 10);
+                        }
+                    };
+                    
+                    addLetter();
+                }, delay);
+            }
+            
+            // Create an Intersection Observer to trigger animations when elements are visible
+            const textObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        animateTextElement(element, 200);
+                        textObserver.unobserve(element);
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            // Observe headings and paragraphs for animation
+            document.querySelectorAll('.work-item h3, .work-item p:not(.work-content p), .about-section h2, .latest-work h2').forEach(element => {
+                element.style.opacity = '0';
+                textObserver.observe(element);
+            });
+            
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const pageWrapper = document.querySelector('.page-wrapper');
+            
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                pageWrapper.classList.toggle('menu-open');
+            });
+
+            // Scroll to top on page load
+            window.scrollTo(0, 0);
+            
+            // Project expansion functionality
+            const workItems = document.querySelectorAll('.work-item');
+            
+            workItems.forEach(item => {
+                const closeButton = document.createElement('button');
+                closeButton.className = 'close-button';
+                closeButton.innerHTML = '&times;';
+                closeButton.style.display = 'none';
+                item.appendChild(closeButton);
+
+                item.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('close-button')) return;
+                    
+                    const wasExpanded = item.classList.contains('expanded');
+                    
+                    // Reset all other items first
+                    workItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('expanded');
+                            otherItem.querySelector('.close-button').style.display = 'none';
+                        }
+                    });
+
+                    if (wasExpanded) {
+                        // Collapse this item
+                        item.classList.remove('expanded');
+                        closeButton.style.display = 'none';
+                    } else {
+                        // Expand this item
+                        item.classList.add('expanded');
+                        closeButton.style.display = 'block';
+                        
+                        // Animate text elements inside the expanded content
+                        setTimeout(() => {
+                            const textElements = item.querySelectorAll('.work-content h4, .work-content p');
+                            textElements.forEach((element, index) => {
+                                animateTextElement(element, 100 * index);
+                            });
+                        }, 300);
+                        
+                        // Wait for the DOM to update with expanded content
+                        setTimeout(() => {
+                            // Get the expanded item's position and dimensions
+                            const itemRect = item.getBoundingClientRect();
+                            const itemBottom = itemRect.bottom;
+                            const viewportHeight = window.innerHeight;
+                            
+                            // Calculate how much of the expanded item is outside the viewport
+                            const visiblePortion = viewportHeight - itemRect.top;
+                            const itemHeight = itemRect.height;
+                            
+                            // If the expanded content extends beyond the viewport
+                            if (itemBottom > viewportHeight) {
+                                // Calculate position to scroll to (with offset for better visibility)
+                                const offset = 50;
+                                let scrollPosition;
+                                
+                                // If the item is very tall, scroll to show as much as possible
+                                if (itemHeight > viewportHeight) {
+                                    scrollPosition = window.pageYOffset + itemRect.top - offset;
+                                } else {
+                                    // Otherwise, try to center it in the viewport
+                                    scrollPosition = window.pageYOffset + itemRect.top - (viewportHeight - itemHeight) / 2;
+                                }
+                                
+                                // Scroll to the calculated position
+                                window.scrollTo({
+                                    top: scrollPosition,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }, 50); // Small delay to allow DOM to update
+                    }
+                });
+
+                closeButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    item.classList.remove('expanded');
+                    closeButton.style.display = 'none';
+                });
+            });
+            
+            // Music player functionality
+            const songs = [
+                {
+                    id: 'weddingnight',
+                    audioSrc: 'music/weddingnight.mp3',
+                    lrcSrc: 'music/weddingnight.lrc'
+                },
+                {
+                    id: 'burnitdown',
+                    audioSrc: 'music/burnitdown.mp3',
+                    lrcSrc: 'music/burnitdown.lrc'
+                }
+            ];
+
+            // Initialize audio elements
+            songs.forEach(song => {
+                console.log(`Initializing audio player for song: ${song.id}`);
+                const audio = document.createElement('audio');
+                audio.id = `audioPlayer-${song.id}`;
+                audio.src = song.audioSrc;
+                audio.addEventListener('loadeddata', () => {
+                    console.log(`Audio loaded successfully for ${song.id}`);
+                });
+                audio.addEventListener('error', (e) => {
+                    console.error(`Error loading audio for ${song.id}:`, e.target.error);
+                });
+                document.body.appendChild(audio);
+            });
+
+            // Fetch and parse LRC file
+            async function fetchLrcFile(songId) {
+                console.log(`Fetching LRC file for song: ${songId}`);
+                const song = songs.find(s => s.id === songId);
+                if (!song) {
+                    console.error(`Song not found with id: ${songId}`);
+                    return [];
+                }
+                try {
+                    const response = await fetch(song.lrcSrc);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const lrcText = await response.text();
+                    console.log(`Successfully fetched LRC file for ${songId}`);
+                    return parseLrc(lrcText);
+                } catch (error) {
+                    console.error(`Error fetching LRC file for ${songId}:`, error);
+                    return [];
+                }
+            }
+            
+            function parseLrc(lrcText) {
+                const lines = lrcText.split('\n');
+                const timeRegex = /\[(\d+):(\d+)\.(\d+)\]/;
+                const lrcData = [];
+                
+                lines.forEach(line => {
+                    const match = timeRegex.exec(line);
+                    if (match) {
+                        const minutes = parseInt(match[1]);
+                        const seconds = parseInt(match[2]);
+                        const milliseconds = parseInt(match[3]);
+                        const time = minutes * 60 + seconds + milliseconds / 100;
+                        
+                        const text = line.replace(timeRegex, '').trim();
+                        if (text) {
+                            lrcData.push({ time, text });
+                        }
+                    }
+                });
+                
+                return lrcData;
+            }
+            
+            // Initialize lyrics display for a song
+            async function initLyrics(songId) {
+                const lrcData = await fetchLrcFile(songId);
+                const lyricsContainer = document.querySelector(`#lyricsContainer-${songId}`);
+                const playButton = document.querySelector(`#playButton-${songId}`);
+                const audioPlayer = document.querySelector(`#audioPlayer-${songId}`);
+                
+                // Clear any existing content
+                lyricsContainer.innerHTML = '';
+                
+                // Create lyrics elements
+                lrcData.forEach(line => {
+                    const lyricLine = document.createElement('div');
+                    lyricLine.className = 'lyrics-line';
+                    lyricLine.textContent = line.text;
+                    lyricLine.dataset.time = line.time;
+                    lyricsContainer.appendChild(lyricLine);
+                });
+                
+                // Play button click handler
+                playButton.addEventListener('click', () => {
+                    // Stop all other songs
+                    songs.forEach(s => {
+                        if (s.id !== songId) {
+                            const otherAudio = document.querySelector(`#audioPlayer-${s.id}`);
+                            const otherButton = document.querySelector(`#playButton-${s.id}`);
+                            const otherLyrics = document.querySelector(`#lyricsContainer-${s.id}`);
+                            otherAudio.pause();
+                            otherButton.innerHTML = '<i class="fas fa-play"></i> Click to Play';
+                            otherLyrics.classList.remove('active');
+                        }
+                    });
+
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                        playButton.innerHTML = '<i class="fas fa-pause"></i> Pause';
+                        lyricsContainer.classList.add('active');
+                    } else {
+                        audioPlayer.pause();
+                        playButton.innerHTML = '<i class="fas fa-play"></i> Click to Play';
+                        lyricsContainer.classList.remove('active');
+                    }
+                });
+                
+                // Update lyrics based on current time
+                audioPlayer.addEventListener('timeupdate', () => {
+                    const currentTime = audioPlayer.currentTime;
+                    
+                    // Update active lyrics
+                    const lyricLines = lyricsContainer.querySelectorAll('.lyrics-line');
+                    lyricLines.forEach(line => {
+                        const lineTime = parseFloat(line.dataset.time);
+                        const nextLineIndex = lrcData.findIndex(l => l.time === lineTime) + 1;
+                        const nextLineTime = nextLineIndex < lrcData.length ? lrcData[nextLineIndex].time : Infinity;
+                        
+                        if (currentTime >= lineTime && currentTime < nextLineTime) {
+                            line.classList.add('active');
+                        } else {
+                            line.classList.remove('active');
+                        }
+                    });
+                });
+                
+                // Handle audio ending
+                audioPlayer.addEventListener('ended', () => {
+                    playButton.innerHTML = '<i class="fas fa-play"></i> Click to Play';
+                    lyricsContainer.classList.remove('active');
+                });
+            }
+            
+            // Initialize the lyrics display for each song
+            songs.forEach(song => {
+                console.log(`Initializing lyrics for song: ${song.id}`);
+                initLyrics(song.id).catch(error => {
+                    console.error(`Failed to initialize lyrics for ${song.id}:`, error);
+                });
+            });
         });
     </script>
 </body>
-</html> 
+</html>
