@@ -402,6 +402,50 @@ body {
         max-width: 300px;
     }
 
+.profile-desc {
+    font-size: 0.9rem;
+    max-width: 300px;
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInDesc 0.5s ease forwards;
+    animation-delay: 1.5s;
+    position: relative;
+    display: inline-block;
+}
+
+.profile-desc::before,
+.profile-desc::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    vertical-align: middle;
+}
+
+.profile-desc::before {
+    right: 100%;
+    margin-right: 10px;
+    width: 30px;
+    transform-origin: right;
+    animation: lineExtendLeft 0.8s ease forwards;
+    animation-delay: 1.7s;
+}
+
+.profile-desc::after {
+    left: 100%;
+    margin-left: 10px;
+    width: 30px;
+    transform-origin: left;
+    animation: lineExtendRight 0.8s ease forwards;
+    animation-delay: 1.7s;
+}
+    
+
     .socials-container {
         padding: 2rem;
     }
@@ -444,6 +488,74 @@ body {
     to {
         opacity: 0.8;
         transform: translateY(0);
+    }
+}
+
+.profile-desc {
+    font-size: 1rem;
+    max-width: 500px;
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInDesc 0.5s ease forwards;
+    animation-delay: 1.5s;
+    position: relative;
+    display: inline-block;
+}
+
+.profile-desc::before,
+.profile-desc::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    vertical-align: middle;
+}
+
+.profile-desc::before {
+    right: 100%;
+    margin-right: 10px;
+    width: 175px;
+    transform-origin: right;
+    animation: lineExtendLeft 1.2s ease forwards;
+    animation-delay: 1.7s;
+}
+
+.profile-desc::after {
+    left: 100%;
+    margin-left: 10px;
+    width: 175px;
+    transform-origin: left;
+    animation: lineExtendRight 1.2s ease forwards;
+    animation-delay: 1.7s;
+}
+
+@keyframes fadeInDesc {
+    to {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+}
+
+@keyframes lineExtendLeft {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes lineExtendRight {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
     }
 }
 
