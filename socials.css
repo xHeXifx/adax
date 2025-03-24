@@ -6,6 +6,11 @@
     --card-bg: rgba(255, 255, 255, 0.05);
 }
 
+@font-face {
+    font-family: SF-Pro;
+    src: url('fonts/SF-Pro.ttf') format('truetype');
+}
+
 /* Music Section Styles */
 .music-section {
     margin-top: 3rem;
@@ -287,6 +292,7 @@ body {
 }
 
 .profile-name {
+    font-family: SF-Pro;
     font-size: 3.5rem;
     color: var(--primary-purple);
     margin: 0;
